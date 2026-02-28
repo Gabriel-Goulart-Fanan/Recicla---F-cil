@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #0f0f1e;
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden; /* significa que vai desabilitar o scroll da pagina. Tudo que ultrapassar os limites da largura ou altura do elemento será cortado e escondido. */
+}
+
+header {
+    position: fixed; 
+    width: 90vw; /* significa viewport width (largura da área visível da tela). 1vw = 1% da largura da tela do usuário. */
+    top: 0;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3; /* significa que esse elemento ficará na camada 3. Quanto maior o número, mais na frente ele fica*/
+}
+
+.logo {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem; /* O tamanho da fonte será 2 vezes o tamanho da fonte do elemento raiz (html). Exemplo: html font-size: 10px; 1rem 10px, 2rem 20px*/
+    font-weight: 900;
+    color: #00f7ff;
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+}
+
+header nav ul {  /* Entra na header depois para nav e então na ul para alterar a ul*/
+    display: flex;
+    gap: 40px;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00f7ff;
+    transition: width 0.5s; /* aplica atransição de 0.5 segundos na animação*/
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 247, 255, 0.2)0%, rgba(15, 15, 30, 0) 70%); /* Diferente do linear-gradient (que é em linha reta), o radial começa do centro e espalha para fora. Define o formato do gradiente. Pode ser:circle ou ellipse (padrão)*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* transform serve para mover, rotacionar, escalar ou distorcer um elemento.Translate move o elemento no eixo X e Y. */
+    filter: blur(50px);
+    z-index: 1;
+    animation: pulse 4s infinite alternate;
+
+}
+
+/*
+O que é ::before e ::after?
+São pseudo-elementos que criam um elemento virtual antes ou depois do conteúdo real de um elemento.
+content é obrigatório. Se não tiver content, o pseudo-elemento não aparece.
+Sempre coloque position: relative no pai.
+*/
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+.list {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.item {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
