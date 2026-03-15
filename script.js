@@ -33,6 +33,8 @@ function update(direction) {
     items[active].classList.add('active')
     dots[active].classList.add('active')
 
+    numberIndicator.textContent = String(active + 1).padStart(2,'0')
+
 }
 
 prevButton.addEventListener('click', function() {
@@ -42,3 +44,8 @@ prevButton.addEventListener('click', function() {
 nextButton.addEventListener('click', function() {
     update(1)
 })
+
+clearInterval(timer)
+timer = setInterval(() => {
+    update(1)
+}, 5000);

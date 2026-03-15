@@ -113,10 +113,15 @@ Sempre coloque position: relative no pai.
     justify-content: center;
     align-items: center;
     opacity: 0;
+
+    /* ANIMAÇÂO */
+    transform: translateX(100vw);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
 .active{
     opacity: 1;
+    transform: translateX(0);
 }
 
 .product-img {
@@ -132,7 +137,19 @@ Sempre coloque position: relative no pai.
 .product-img img {
     max-width: 80%;
     max-height: 60%;
-    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3))
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+
+    /* ANIMAÇÂO */
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+    
+}
+
+.active .product-img img {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .content {
