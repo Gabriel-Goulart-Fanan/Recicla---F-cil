@@ -169,6 +169,17 @@ Sempre coloque position: relative no pai.
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
+
+    /* ANIMAÇÂO */
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.active .tag {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .name {
@@ -176,6 +187,17 @@ Sempre coloque position: relative no pai.
     font-family: "Orbitron", sans-serif;
     line-height: 1.1;
     margin-bottom: 20px;
+
+    /* ANIMAÇÂO */
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.active .name {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .description {
@@ -184,19 +206,40 @@ Sempre coloque position: relative no pai.
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 600px;
+
+    /* ANIMAÇÂO */
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.active .description {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .btn {
+    cursor: pointer;
     padding: 12px 16px;
     background: linear-gradient(90deg, #00f7ff, #0066ff);
     border-radius: 30px;
     color: #000;
     font-size: 1rem;
     font-weight: 600;
-    cursor: pointer;
     border: none;
-    cursor: pointer;
     animation: houver 1.5s infinite alternate;
+
+    /* ANIMAÇÂO */
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.active .btn {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 @keyframes houver {
