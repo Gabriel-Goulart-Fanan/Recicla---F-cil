@@ -48,4 +48,4 @@ nextButton.addEventListener('click', function() {
 clearInterval(timer)
 timer = setInterval(() => {
     update(1)
-}, 5000);
+}, 7000);
