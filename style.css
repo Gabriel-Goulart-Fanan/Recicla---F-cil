@@ -76,7 +76,6 @@ header nav ul li:hover::after {
     left: 50%;
     transform: translate(-50%, -50%); /* transform serve para mover, rotacionar, escalar ou distorcer um elemento.Translate move o elemento no eixo X e Y. */
     filter: blur(50px);
-    z-index: 1;
     animation: pulse 4s infinite alternate;
 
 }

@@ -4,6 +4,7 @@ const items = document.querySelectorAll('.item')
 const dots = document.querySelectorAll('.dot')
 const numberIndicator = document.querySelector('.numbers')
 const list = document.querySelector('.list')
+const button = document.querySelector('.btn')
 
 let active = 0;
 const total = items.length
