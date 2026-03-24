@@ -5,6 +5,7 @@ const dots = document.querySelectorAll('.dot')
 const numberIndicator = document.querySelector('.numbers')
 const list = document.querySelector('.list')
 const button = document.querySelector('.btn')
+const modal = document.querySelector('dialog')
 
 let active = 0;
 const total = items.length

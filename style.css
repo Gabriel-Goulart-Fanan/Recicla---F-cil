@@ -250,6 +250,14 @@ Sempre coloque position: relative no pai.
     }
 }
 
+.modal {
+    background-color: #1f1f3a;
+}
+
+.title{
+    font-family: "Orbitron", sans-serif;
+}
+
 .arrows {
     position: absolute;
     width: 90%;
