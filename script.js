@@ -6,10 +6,20 @@ const numberIndicator = document.querySelector('.numbers')
 const list = document.querySelector('.list')
 const button = document.querySelector('.btn')
 const modal = document.querySelector('dialog')
+const btnClose = document.querySelector("dialog button")
 
 let active = 0;
 const total = items.length
 let timer;
+
+
+button.onclick = function () {
+    modal.showModal()
+}
+
+btnClose.onclick = function () {
+    modal.close()
+}
 
 function update(direction) {
 
