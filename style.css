@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #0f0f1e;
+    background-color: #0f1e16;
     color: #fff;
     font-size: 16px;
     overflow: hidden; /* significa que vai desabilitar o scroll da pagina. Tudo que ultrapassar os limites da largura ou altura do elemento será cortado e escondido. */
@@ -28,7 +28,7 @@ header {
     font-family: "Orbitron", sans-serif;
     font-size: 2rem; /* O tamanho da fonte será 2 vezes o tamanho da fonte do elemento raiz (html). Exemplo: html font-size: 10px; 1rem 10px, 2rem 20px*/
     font-weight: 900;
-    color: #00f7ff;
+    color: #56d96b;
     text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
 }
 
@@ -50,7 +50,7 @@ header nav ul li::after {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #00f7ff;
+    background-color: #56d96b;;
     transition: width 0.5s; /* aplica atransição de 0.5 segundos na animação*/
 }
 
@@ -61,7 +61,7 @@ header nav ul li:hover::after {
 .container {
     height: 100vh;
     position: relative;
-    background: linear-gradient(135deg, #0D1B1E 10%, #1B4332 100%);
+    background: linear-gradient(135deg, #0a1a0d 10%, #1B4332 100%);
     overflow: hidden;
 }
 
@@ -70,7 +70,7 @@ header nav ul li:hover::after {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 247, 255, 0.2)0%, rgba(15, 15, 30, 0) 70%); /* Diferente do linear-gradient (que é em linha reta), o radial começa do centro e espalha para fora. Define o formato do gradiente. Pode ser:circle ou ellipse (padrão)*/
+    background: radial-gradient(circle, rgba(86, 217, 107, 0.18) 0%, rgba(10, 26, 13, 0) 70%); /* Diferente do linear-gradient (que é em linha reta), o radial começa do centro e espalha para fora. Define o formato do gradiente. Pode ser:circle ou ellipse (padrão)*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -136,7 +136,7 @@ Sempre coloque position: relative no pai.
 .product-img img {
     max-width: 80%;
     max-height: 60%;
-    filter: drop-shadow(0 0 30px green);
+    filter: drop-shadow(0 0 30px #38a347);
 
     /* ANIMAÇÂO */
     transform: translateX(200px);
@@ -164,7 +164,7 @@ Sempre coloque position: relative no pai.
 .tag {
     font-size: 1rem;
     text-transform: uppercase;
-    color: #C8E6C9;
+    color: #a8d5a2;
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
@@ -221,7 +221,7 @@ Sempre coloque position: relative no pai.
 .btn {
     cursor: pointer;
     padding: 12px 16px;
-    background: linear-gradient(90deg,#1B4332, #38B000);
+    background: linear-gradient(90deg,#1a5c2a, #56d96b);
     border-radius: 30px;
     color: #000;
     font-size: 1rem;
@@ -251,7 +251,7 @@ Sempre coloque position: relative no pai.
 }
 
 .modal {
-    background-color: #1f1f3a;
+    background-color: #122b18;
 }
 
 .title{
@@ -274,13 +274,13 @@ Sempre coloque position: relative no pai.
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0, 247, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(86, 217, 107, 0.3);
 }
 
 .arrow-btn:hover {
-    background-color: rgba(0, 247, 255, 0.2);
-    border-color: #00f7ff;
+    background-color: rgba(86, 217, 107, 0.18);
+    border-color: #56d96b;
 }
 
 .indicators {
@@ -315,8 +315,8 @@ Sempre coloque position: relative no pai.
 }
 
 .dot.active {
-    background-color: #00f7ff;
-    box-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+    background-color: #56d96b;
+    box-shadow: 0 0 10px rgba(86, 217, 107, 0.5);
 }
 
 .tech-circle {
@@ -331,7 +331,7 @@ Sempre coloque position: relative no pai.
 .circle {
     position: absolute;
     border-radius: 50%;
-    border: 1px solid rgba(0, 247, 255, 0.2);
+    border: 1px solid rgba(86, 217, 107, 0.2);
 }
 
 .circle:nth-child(1){
