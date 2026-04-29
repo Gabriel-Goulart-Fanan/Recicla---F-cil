@@ -4,22 +4,25 @@ const items = document.querySelectorAll('.item')
 const dots = document.querySelectorAll('.dot')
 const numberIndicator = document.querySelector('.numbers')
 const list = document.querySelector('.list')
-const button = document.querySelector('.btn')
-const modal = document.querySelector('dialog')
-const btnClose = document.querySelector("dialog button")
 
 let active = 0;
 const total = items.length
 let timer;
 
 
-button.onclick = function () {
-    modal.showModal()
-}
+items.forEach(function(item) {
+    const btn = item.querySelector('.btn')
+    const modal = item.querySelector('dialog')
+    const btnClose = item.querySelector('dialog button')
 
-btnClose.onclick = function () {
-    modal.close()
-}
+    btn.addEventListener('click', function() {
+        modal.showModal()
+    })
+
+    btnClose.addEventListener('click', function() {
+        modal.close()
+    })
+})
 
 function update(direction) {
 
@@ -42,7 +45,7 @@ function update(direction) {
         }
     }
 
-    items[active].classList.add('active')
+    items[active].classList.add('active')   
     dots[active].classList.add('active')
 
     numberIndicator.textContent = String(active + 1).padStart(2,'0')
