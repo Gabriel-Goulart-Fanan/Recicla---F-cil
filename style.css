@@ -250,10 +250,6 @@ Sempre coloque position: relative no pai.
     }
 }
 
-.modal {
-    background-color: #122b18;
-}
-
 .title{
     font-family: "Orbitron", sans-serif;
 }
@@ -372,39 +368,56 @@ dialog::backdrop {
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 28px 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(168, 213, 162, 0.1);
     width: 80%;
     max-width: 500px;
-    background-color: #455d4a;
+    background-color: #1a3321;
+    gap: 16px;
+}
+
+.modal[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
     display: flex;
     justify-content: center;
+    font-family: "Orbitron", sans-serif;
     font-size: 20px;
+    font-weight: 600;
     color: #a8d5a2;
     line-height: 1.6;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
 }
 
 .modal-content {
     display: flex;
     justify-content: center;
-    font-size: 16px;
-    color: #FFFFFF;
-    line-height: 1.6;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+    text-align: center;
 }
 
 .modal-btn {
     cursor: pointer;
-    line-height: 1.6;
-    padding: 12px 16px;
-    background: linear-gradient(90deg,#1a5c2a, #56d96b);
+    padding: 10px 28px;
+    background: linear-gradient(135deg, #1a5c2a, #56d96b);
     border-radius: 30px;
-    color: #000;
-    font-size: 0.8rem;
-    font-weight: 600;
+    color: #071a0b;
+    font-size: 0.85rem;
+    font-weight: 700;
     border: none;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s ease, transform 0.15s ease;
     animation: houver 1.5s infinite alternate;
+}
+
+.modal-btn:hover {
+    opacity: 0.88;
 }
